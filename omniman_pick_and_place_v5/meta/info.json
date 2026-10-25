@@ -1,0 +1,110 @@
+{
+    "codebase_version": "v3.0",
+    "fps": 30,
+    "features": {
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null,
+            "fps": 30
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null,
+            "fps": 30
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null,
+            "fps": 30
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null,
+            "fps": 30
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null,
+            "fps": 30
+        },
+        "observation.images.cam": {
+            "dtype": "video",
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "info": {
+                "video.height": 480,
+                "video.width": 640,
+                "video.channels": 3,
+                "video.codec": "libx264",
+                "video.pix_fmt": "yuv420p"
+            }
+        },
+        "observation.state": {
+            "dtype": "float32",
+            "names": [
+                "shoulder_yaw_joint",
+                "upper_shoulder_pitch_joint",
+                "arm_yaw_joint",
+                "forearm_pitch_joint",
+                "wrist_pitch_joint",
+                "palm_yaw_joint",
+                "gripper_prismatic_joint"
+            ],
+            "shape": [
+                7
+            ],
+            "fps": 30
+        },
+        "action": {
+            "dtype": "float32",
+            "names": [
+                "shoulder_yaw_joint",
+                "upper_shoulder_pitch_joint",
+                "arm_yaw_joint",
+                "forearm_pitch_joint",
+                "wrist_pitch_joint",
+                "palm_yaw_joint",
+                "gripper_prismatic_joint"
+            ],
+            "shape": [
+                7
+            ],
+            "fps": 30
+        }
+    },
+    "total_episodes": 368,
+    "total_frames": 152117,
+    "total_tasks": 1,
+    "chunks_size": 1000,
+    "data_files_size_in_mb": 100,
+    "video_files_size_in_mb": 200,
+    "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+    "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+    "robot_type": "omniman",
+    "splits": {
+        "train": "0:368"
+    }
+}
